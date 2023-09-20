@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payoneer</title>
+  <link rel="shortcut icon" href="img/payo.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+  <nav class="nav">
+    <img src="img/payo.png" alt="payonner" class="nav_img">
+    <div class="nav_buttons">
+      <a href="#" class="nav_button">Home</a>
+      <a href="#" class="nav_button">Send</a>
+      <a href="#" class="nav_button">Wallet</a>
+      <a href="#" class="nav_button">Activity</a>
+    </div>
+  </nav>
+  <main>
+    <div class="content">
+      <img src="img/payo-logo.png" alt="payonner logo" class="content_logo">
+      <h2 class="content_money"></h2>
+      <h4 class="content_charity">Estimated total of all currencies</h4>
+      <form action="#" class="contnet_form">
+        <div class="form__inputs">
+          <label for="nickname" class="form__title">Send payment to:</label>
+          <input type="text" name="nickname" id="nickname" class="form__input" placeholder="Nickname">
+          <label for="amount" class="form__title">Transfer amount:</label>
+          <input type="text" name="amount" id="amount" class="form__input" placeholder="Amount">
+        </div>
+        <h3 class="form__amount">0.00$</h3>
+        <a href="#" class="form_button">Transfer money</a>
+      </form>
+    </div>
+    <div class="success">
+      <img src="img/check.png" alt="checked" class="success__img">
+      <h2 class="success__title">Payment is successful</h2>
+      <h4 class="success__detail"></h4>
+      <a href="#" class="form_button success__button">Make another payment</a>
+    </div>
+  </main>
+</body>
+<script src="js/app.js"></script>
+</html>
