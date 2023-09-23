@@ -135,8 +135,6 @@ h4 {
   width: 150px;
 }
 
-/* loader */
-
 .loader_container {
   display: none;
 }
@@ -164,8 +162,6 @@ h4 {
   text-align: center;
   margin-top: 30px;
 }
-
-/* footer */
 
 .footer {
   position: fixed;
