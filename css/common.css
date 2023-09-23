@@ -1,3 +1,5 @@
+@import url(keyframes.css);
+
 * {
   margin: 0;
   padding: 0;
@@ -149,14 +151,6 @@ h4 {
     border-radius: 50%;
     animation: loader 1.5s linear infinite;
 }
-/* @keyframes loader {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-} */
 
 .loader__wait {
   text-align: center;
