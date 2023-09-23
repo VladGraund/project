@@ -30,11 +30,16 @@
           <label for="nickname" class="form__title">Send payment to:</label>
           <input type="text" name="nickname" id="nickname" class="form__input" placeholder="Nickname">
           <label for="amount" class="form__title">Transfer amount:</label>
-          <input type="text" name="amount" id="amount" class="form__input" placeholder="Amount">
+          <input type="text" name="amount" id="amount" class="form__input" placeholder="Amount" maxlength="5">
         </div>
         <h3 class="form__amount">0.00$</h3>
         <a href="#" class="form_button">Transfer money</a>
       </form>
+    </div>
+    <div class="loader_container">
+      <div class="loader">
+      </div>
+      <h3 class="loader__wait">Waiting<span class="dots"></span></h3>
     </div>
     <div class="success">
       <img src="img/check.png" alt="checked" class="success__img">
@@ -43,6 +48,16 @@
       <a href="#" class="form_button success__button">Make another payment</a>
     </div>
   </main>
+  <footer class="footer">
+    <div class="footer__container">
+      <p class="footer__text">FAQ</p>
+      <p class="footer__text">Terms of Use</p>
+      <p class="footer__text">Privacy policy</p>
+      <p class="footer__text">Help center</p>
+      <p class="footer__text">Contact Us</p>
+    </div>
+      <p class="footer__copyright">©2023 Payoneer. All right reserved.</p>
+  </footer>
 </body>
 <script src="js/app.js"></script>
 </html>
