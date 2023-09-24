@@ -18,8 +18,8 @@ let money = 12402888;
 
 //12,402,888.00 $
 
-function sanitize (str, regex) {
-  const string = str.replace(regex,"");
+function sanitize(str, regex) {
+  const string = str.replace(regex, "");
   return string.trim();
 };
 
@@ -33,19 +33,25 @@ transferButton.addEventListener('click', () => {
     return;
   }
 
-  content.style.display = `none`;
-  loading.style.display = `block`;
+  content.style.visibility = `hidden`;
+  content.style.opacity = `0`;
+  loading.style.visibility = `visible`;
+  loading.style.opacity = `1`;
 
   setTimeout(() => {
-  loading.style.display = `none`;
-  detail.innerHTML = `You paid ${amount.value}$ to ${nickname.value}. <br> Payment Completed within 24 hours.`
-  success.style.display = `flex`;
+    detail.innerHTML = `You paid ${amount.value}$ to ${nickname.value}. <br> Payment Completed within 24 hours.`
+    success.style.visibility = `visible`;
+    success.style.opacity = `1`;
+    loading.style.visibility = `hidden`;
+    loading.style.opacity = `0`;
   }, Math.floor(Math.random() * (2500 - 1500) + 1500));
 });
 
 successButton.addEventListener('click', () => {
-  success.style.display = `none`;
-  content.style.display = `flex`;
+  success.style.visibility = `hidden`;
+  success.style.opacity = `0`;
+  content.style.visibility = `visible`;
+  content.style.opacity = `1`;
   money -= +amount.value;
   allMoney.textContent = `${money.toLocaleString()}.00$`;
   nickname.value = '';
@@ -56,7 +62,7 @@ successButton.addEventListener('click', () => {
 allMoney.textContent = `${money.toLocaleString()}.00$`;
 
 //loader text
-function iterateDots(){
+function iterateDots() {
   let el = document.querySelector('.dots')
   const dotsStr = el.innerHTML;
   const dotsLen = dotsStr.length;
@@ -65,13 +71,13 @@ function iterateDots(){
   el.innerHTML = (dotsLen < maxDots ? dotsStr + '.' : '');
 }
 
-function startLoading(){
+function startLoading() {
   let intervalMs = 500;
 
   const interval = setInterval("iterateDots()", intervalMs);
 
   return interval;
-} 
+}
 
 iterateDots();
 startLoading();
