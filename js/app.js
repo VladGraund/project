@@ -25,7 +25,7 @@ function sanitize(str, regex) {
 
 amount.addEventListener('keyup', () => {
   amount.value = sanitize(amount.value, /[^0-9áéíóúñü \.,_-]/gim);
-  finishAmount.textContent = `${+amount.value}.00 USD`;
+  finishAmount.textContent = `${+amount.value}.00`;
 });
 
 transferButton.addEventListener('click', () => {
@@ -39,7 +39,7 @@ transferButton.addEventListener('click', () => {
   loading.style.opacity = `1`;
 
   setTimeout(() => {
-    detail.innerHTML = `You paid ${amount.value} USD to ${nickname.value}. <br> Payment Completed within 24 hours.`
+    detail.innerHTML = `You paid ${amount.value} to ${nickname.value}. <br> Payment Completed within 24 hours.`
     success.style.visibility = `visible`;
     success.style.opacity = `1`;
     loading.style.visibility = `hidden`;
@@ -53,13 +53,13 @@ successButton.addEventListener('click', () => {
   content.style.visibility = `visible`;
   content.style.opacity = `1`;
   money -= +amount.value;
-  allMoney.textContent = `${money.toLocaleString()}.00 USD`;
+  allMoney.textContent = `${money.toLocaleString()}.00`;
   nickname.value = '';
   amount.value = '';
-  finishAmount.textContent = '0.00 USD';
+  finishAmount.textContent = '0.00';
 });
 
-allMoney.textContent = `${money.toLocaleString()}.00 USD`;
+allMoney.textContent = `${money.toLocaleString()}.00`;
 
 //loader text
 function iterateDots() {
